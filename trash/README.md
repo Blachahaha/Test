@@ -57,9 +57,10 @@ module S18T
     end
 end
 ```
+
+### A sample game "WalkingDot"
 A simple game using S18T Engine is located under the path "example/walkingDot". To run the example, just run the following command:
 ```Bash
 #ruby /path/to/example/walkingDot/start.rb
 ```
-
-## 
+In the game, the user moves a single dot. By browsing its code, you can see how to create new scenes and objects.
