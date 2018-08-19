@@ -19,10 +19,39 @@ For easier writing, it is recommended to write the code in the S18T module.
 The simplest application using S18T looks like this:
 ```
 module S18T
-  require "/path/to/S18T/S18T.rb"
+  require "/path/to/S18T/S18T.rb" #include S18T engine
 
-  Engine.Start();
+  Engine.Start(); # start engine
   #do something
-  Engine.Stop();
+  Engine.Stop(); # stop engine
+end
+```
+Application template using the S18T engine can be found in path "examples/template". It contains a code:
+```
+module S18T
+    #Include S18T
+    dir = "./"+File.dirname(__FILE__)+"/"
+    require dir+"../../S18T/S18T.rb"
+
+    #start S18T Engine
+    Engine.Start();
+    #clear terminal
+    Screen.Clear();
+    #set scene
+    Engine.SetScene( Scene.new() );
+    
+    #mainloop
+    #if engine working this loop will be still doing
+    while Engine.Working?() do
+        
+        #call MainLoop() meth, S18T update Input class and scene.
+        Engine.MainLoop();
+
+        #if user press CTRL + C (^C), stop engine.
+        if( Input.Key( KEY[:CTRL_C]))
+            Screen.Clear();
+            Engine.Stop();
+        end
+    end
 end
 ```
