@@ -9,7 +9,20 @@ require "/path/to/S18T/S18T.rb"
 It's enough to use the game engine classes.
 
 ### Using engine class
-All classes and engine components are in the module named "S18T". Therefore, any reference to engine classes should be preceded by "S18T ::".
+All classes and engine components are in the module named "S18T". Therefore, any reference to engine classes should be preceded by "S18T ::":
 ```
 S18T::ClassName
+```
+For easier writing, it is recommended to write the code in the S18T module.
+
+### Simple using S18T Engine
+The simplest application using S18T looks like this:
+```
+module S18T
+  require "/path/to/S18T/S18T.rb"
+
+  Engine.Start();
+  #do something
+  Engine.Stop();
+end
 ```
