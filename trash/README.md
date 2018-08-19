@@ -2,9 +2,8 @@
 Simple terminal game engine, written in Ruby.
 
 ## Getting Started
-To use S18T you need to put the source code in the specified directory. It is contained in the "S18T" catalog.
-Then, include the file "S18T / S18T.rb" in your program. For exemple:
+First, download the engine source code (S18T directory) to the empty location. Then, in the new file with the extension .rb, include the file S18T.rb located in the S18T directory. For example:
 ```
-require "path/to/S18T/S18T.rb"
+require "/path/to/S18T/S18T.rb"
 ```
-That's enough to be able to use S18T.
+It's enough to use the game engine classes.
