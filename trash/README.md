@@ -2,6 +2,8 @@
 Simple terminal game engine, written in Ruby.
 
 ## Getting Started
+S18T Engine requires installed Ruby on OS.
+### First steps
 First, download the engine source code (S18T directory) to the empty location. Then, in the new file with the extension .rb, include the file S18T.rb located in the S18T directory. For example:
 ```Ruby
 require "/path/to/S18T/S18T.rb"
