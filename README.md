@@ -85,8 +85,11 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+
+# Help
+
+## …or create a new repository on the command line
 ```
-#…or create a new repository on the command line
 echo "# Test" >> README.md
 git init
 git add README.md
@@ -95,7 +98,7 @@ git remote add origin git@github.com:lblaszka/Test.git
 git push -u origin master
 ```
 
-#…or push an existing repository from the command line
+## …or push an existing repository from the command line
 ```
 git remote add origin git@github.com:lblaszka/Test.git
 git push -u origin master
