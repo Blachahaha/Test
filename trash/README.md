@@ -7,3 +7,9 @@ First, download the engine source code (S18T directory) to the empty location. T
 require "/path/to/S18T/S18T.rb"
 ```
 It's enough to use the game engine classes.
+
+### Using engine class
+All classes and engine components are in the module named "S18T". Therefore, any reference to engine classes should be preceded by "S18T ::".
+```
+S18T::ClassName
+```
