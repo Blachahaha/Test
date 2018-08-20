@@ -160,3 +160,65 @@ end
 ```
 WalkingDotScene has only one method, init(). This called by S18T::Engine class when scene object was started servised by engine. In WalkingDotScene class in init() method is added new object WalkingDotObject in this moment new game object will be working.
 #### start.rb file
+On end, take a look on start.rb in main catalog of WalkingDot example.
+```ruby
+module S18T
+    #Include S18T
+    dir = "./"+File.dirname(__FILE__)+"/"
+    require dir+"../../S18T/S18T.rb"
+    require dir+"Class/WalkingDotScene.rb"
+    require dir+"Class/WalkingDotObject.rb"
+
+    #start S18T Engine
+    Engine.Start();
+    #clear terminal
+    Screen.Clear();
+    #set scene
+    Engine.SetScene( WalkingDotScene.new() );
+    
+    #mainloop
+    #if engine working this loop will be still doing
+    while Engine.Working?() do
+        
+        #call MainLoop() meth, S18T update Input class and scene.
+        Engine.MainLoop();
+
+        #if user press CTRL + C (^C), stop engine.
+        if( Input.Key( KEY[:CTRL_C]))
+            Screen.Clear();
+            Engine.Stop();
+        end
+    end
+end
+```
+First, need include S18T Engine files and class of WalkingDot. 
+```ruby
+dir = "./"+File.dirname(__FILE__)+"/"
+require dir+"../../S18T/S18T.rb"
+require dir+"Class/WalkingDotScene.rb"
+require dir+"Class/WalkingDotObject.rb"
+```
+In dir varible is saved path to "start.rb" file. Next, included files (S18T/S18T.rb, Class/WalkingDotScene.rb and Class/WalkingDotObject.rb).
+Next step is inited S18T engine:
+```ruby
+Engine.Start();
+```
+Now, S18T is inited and is set terminal mod on "raw, no echo". Next step is set WalkingDotScene in Engine.
+```ruby
+Engine.SetScene( WalkingDotScene.new() );
+```
+In this moment, S18T::Engine class called init() method on WalkingDotScene object. Next is loop:
+```ruby
+while Engine.Working?() do
+        
+    #call MainLoop() meth, S18T update Input class and scene.
+    Engine.MainLoop();
+
+    #if user press CTRL + C (^C), stop engine.
+    if( Input.Key( KEY[:CTRL_C]))
+        Screen.Clear();
+        Engine.Stop();
+    end
+end
+```
+S18T::Engine.Working?() return true if S18T::Engine working. Calling S18T::Engine.MainLoop() for call update() methods for all game object included in current scene object. For exit game need press CTRL + C, if pressed, terminal was cleared and S18T stoped. Then S18T::Engine.Working?() return false ane loop was ended.
