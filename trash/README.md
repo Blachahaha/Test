@@ -1,6 +1,13 @@
 # S18T
 Simple terminal game engine, written in Ruby.
 
+## Fast look
+Make sure you have ruby installed. Download the source code and run one of the examples in the "example/" catalog.
+```bash
+ruby /path/to/S18T/example/pongProject/start.sh
+```
+Have fun!
+
 ## Getting Started
 S18T Engine requires installed Ruby on OS.
 ### First steps
