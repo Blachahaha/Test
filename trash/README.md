@@ -2,9 +2,11 @@
 Simple terminal game engine, written in Ruby.
 
 ## Fast look
-Make sure you have ruby installed. Download the source code and run one of the examples in the "example/" catalog.
+Make sure you have ruby and git installed. Next, execute the following code in the shell:
 ```bash
-ruby /path/to/S18T/example/pongProject/start.sh
+cd ~/
+git clone https://github.com/lblaszka/S18T
+ruby ~/S18T/example/pongProject/start.sh
 ```
 Have fun!
 
