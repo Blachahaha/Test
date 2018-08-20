@@ -122,7 +122,7 @@ if( Input.Key( char ) )
 end
 ```
 For simple chars (like: "a", "b" ... "z", "0", "1", ... "9"), you can insert in parameter char.
-```
+```ruby
 if( Input.Key( "a" ) )
   #if pressed "a" do this.
 end
@@ -131,7 +131,7 @@ if( Input.Key( "1" ) )
 end
 ```
 For special keys ( like: enter, tab, arrow keys, etc.) defined in the table S18T::KEY (This table is include in "S18T/Class/Base/Input.rb").
-```
+```ruby
 if( Input.Key( KEY[:left ] )
   #if pressed left arrow key do this.
 end
@@ -140,4 +140,7 @@ if( Input.Key( KEY[:enter] )
 end
 ```
 Back to WalkingDotObject class, for change position of object use changePosition( deltaPosition ) method. Parameter is object of S18T::Vector2 class. First value of vector is x, second is y.
+```ruby
+changePosition( Vector2.new( deltaPosition_X, deltaPosition_Y ) );
+```
 Next, take a look on "WalkingDotScene.rb". In S18T, all game object must be insert to S18T::Scene class object. For WalkingDot game was created class "WalkingDotScene". It is 
