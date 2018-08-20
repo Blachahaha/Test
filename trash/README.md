@@ -1,7 +1,7 @@
 # S18T
 Simple terminal game engine, written in Ruby. S18T supported GNU/Linux OS. If your OS used terminal, S18T should working good (if hes installed ruby!).
 ####
-S18T Engine was created for learning ruby language. Cen be use to write simple terminal game or application. Engine work great with ssh protocol.
+S18T Engine was created for learning ruby language. Cen be use to write simple terminal game or application. Engine work great with ssh protocol, telnet etc.
 
 ## Fast look
 Make sure you have ruby and git installed. Next, execute the following code in the shell:
