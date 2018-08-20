@@ -74,6 +74,7 @@ A simple game using S18T Engine is located under the path "example/walkingDot". 
 #ruby /path/to/example/walkingDot/start.rb
 ```
 In the game, the user moves a single dot. By browsing its code, you can see how to create new scenes and objects. It is basic element of game.
+#### WalkingDotObject class
 First, look on Class catalog. There is two files: WalkingDotScene.rb and WalkingDotObject.rb. In WalkingDotObject.rb is ther code:
 ```ruby
 module S18T
@@ -143,4 +144,19 @@ Back to WalkingDotObject class, for change position of object use changePosition
 ```ruby
 changePosition( Vector2.new( deltaPosition_X, deltaPosition_Y ) );
 ```
-Next, take a look on "WalkingDotScene.rb". In S18T, all game object must be insert to S18T::Scene class object. For WalkingDot game was created class "WalkingDotScene". It is 
+#### WalkingDotScene class
+Next, take a look on "WalkingDotScene.rb". In S18T, all game object must be insert to S18T::Scene class object. For WalkingDot game was created class "WalkingDotScene" inherid by S18T::Scene class.
+```ruby
+module S18T
+
+    class WalkingDotScene < Scene
+
+        def init()
+            addObject( WalkingDotObject.new() );
+        end
+    end
+
+end
+```
+WalkingDotScene has only one method, init(). This called by S18T::Engine class when scene object was started servised by engine. In WalkingDotScene class in init() method is added new object WalkingDotObject in this moment new game object will be working.
+#### start.rb file
