@@ -110,5 +110,10 @@ end
 ```
 It is very simple game object. New class "WalkingDotObject" inherid by "S18T::Object" class. This is required for each game object!
 This class include two methods: start and update. Method start in S18T::Object classes is called only one then game object was created. In WalkingDotObject class on start method is set position of object and added simple sprite.
+```ruby
+setPosition( Vector2.new( position_X, position_Y ); # set position of game object
+@sprite = Sprite.new( Vector2.new( spriteSize_X, spriteSize_Y ) ); #created new S18T::Sprite object and set as @sprite 
+@sprite.setPixel( pixelPosition_X, pixelPosition_Y, Pixel.new( pixelChar, fontColor, backgroundColor ) ); #in created sprite on size 1x1, set pixel on position x and y.
+```
 In update method is checking if arrow buttons are pressed. The S18T::Input class, hes method self.Key( \_char ). This method return true if "\_char" was pressed. For simple chars (like: "a", "b" ... "z", "0", "1", ... "9"), you can insert in parameter char. For special keys ( like: enter, tab, arrow keys, etc.) defined in the table S18T::KEY. This table is include in "S18T/Class/Base/Input.rb". Back to WalkingDotObject class, for change position of object use changePosition( deltaPosition ) method. Parameter is object of S18T::Vector2 class. First value of vector is x, second is y.
 Next, take a look on "WalkingDotScene.rb". In S18T, all game object must be insert to S18T::Scene class object. For WalkingDot game was created class "WalkingDotScene". It is 
