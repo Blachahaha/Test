@@ -221,4 +221,4 @@ while Engine.Working?() do
     end
 end
 ```
-S18T::Engine.Working?() return true if S18T::Engine working. Calling S18T::Engine.MainLoop() for call update() methods for all game object included in current scene object. For exit game need press CTRL + C, if pressed, terminal was cleared and S18T stoped. Then S18T::Engine.Working?() return false ane loop was ended.
+S18T::Engine.Working?() return true if S18T::Engine working. Calling S18T::Engine.MainLoop() for call update() methods for all game object included in current scene object. For exit game need press CTRL + C, if pressed, terminal be cleared and S18T stoped. Then S18T::Engine.Working?() return false ane loop be ended.
