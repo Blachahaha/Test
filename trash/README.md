@@ -130,7 +130,7 @@ if( Input.Key( "1" ) )
   #if pressed "1" do this.
 end
 ```
-For special keys ( like: enter, tab, arrow keys, etc.) defined in the table S18T::KEY (This table is include in "S18T/Class/Base/Input.rb").
+For special keys ( like: enter, tab, arrow keys, etc.) defined in the table S18T::KEY (https://github.com/lblaszka/S18T/blob/master/S18T/Class/Base/Input.rb).
 ```ruby
 if( Input.Key( KEY[:left ] )
   #if pressed left arrow key do this.
