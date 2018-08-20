@@ -108,4 +108,6 @@ module S18T
     end
 end
 ```
-It is very simple game object. In 
+It is very simple game object. New class "WalkingDotObject" inherid by "S18T::Object" class. This is required for each game object!
+This class include two methods: start and update. Method start in S18T::Object classes is called only one then game object was created. In WalkingDotObject class on start method is set position of object and added simple sprite.
+In update method is checking if arrow buttons are pressed. The S18T::Input class, hes method self.Key( \_char ). This method return true if "\_char" was pressed.
